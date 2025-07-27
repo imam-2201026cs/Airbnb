@@ -1,7 +1,7 @@
 import React, { createContext, useState } from 'react'
 export const authDataContext = createContext()
 function AuthContext({children}) {
-    const serverUrl = "https://media-irc8.onrender.com"
+    const serverUrl = process.env.SERVER_URL
 
     let [loading,setLoading]=useState(false)
 
